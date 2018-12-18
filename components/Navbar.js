@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Palace from '../assets/palace.svg'
 
@@ -17,7 +17,7 @@ const styles = {
   },
   brandContainer: {
     // border: '1px solid #ccc',
-    padding: 10,
+    padding: 20,
   },
   brand: {
     color: '#eee',
@@ -26,7 +26,7 @@ const styles = {
     fontWeight: 300,
     textTransform: "uppercase",
     letterSpacing: '1px',
-    
+    textDecoration: 'none'
   },
   links: {
     color: '#ccc',
@@ -45,37 +45,8 @@ const styles = {
   
 }
 
-export default () => {
-  const [width, setWidth] = useState(global.innerWidth)
-  const [navPad, setNavPad] = useState(100)
-  const [brand, setBrand] = useState(true)
-  
-
-  useEffect(()=> {
-    const handleWidthResize = () => setWidth(global.innerWidth)
-    global.addEventListener('resize', handleWidthResize)
-
-    const handleNavPad = (pad) => setNavPad(pad)
-    const handleShowBrand = (brand) => setBrand(brand)
-    if (width > 650){
-      handleNavPad(100)
-      handleShowBrand(true)
-
-    } else {
-      handleNavPad(10)
-      handleShowBrand(false)
-    }
-
-    return () => global.removeEventListener('resize', handleWidthResize)
-  }, [width, navPad, brand])
-
-  const showBrand = (brand) => {
-    if(brand){
-      return (<h1 style={styles.brand}>Cartesian</h1>)
-    } else {
-      return null
-    }
-  }
+export default props => {
+  const { navPad, brand } = props 
 
   return (
     <header>
@@ -84,7 +55,7 @@ export default () => {
             <Link href='/'><a style={styles.palace}><Palace height={20} width={20}/></a></Link>
           </div>
           <div style={styles.brandContainer}>
-            <Link href='/'><a style={{textDecoration: 'none'}}>{showBrand(brand)}</a></Link>
+            <Link href='/'><a style={styles.brand}>{brand}</a></Link>
           </div>
           <div style={styles.linksContainer}>
             <Link href='/Company'><a style={styles.links}>Company</a></Link>
