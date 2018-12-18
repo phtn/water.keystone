@@ -1,0 +1,15 @@
+{
+  "name": "cartesian-v3",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
+  },
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2"
+  },
+  "license": "MIT"
+}
