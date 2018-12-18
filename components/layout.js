@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navbar from './Navbar'
 
-
 export default ({ children, title = 'Cartesian' }) => (
   <div>
     <Head>

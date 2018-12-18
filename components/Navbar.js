@@ -7,45 +7,48 @@ const styles = {
     height: 50,
     backgroundColor: "#066b98",
     display: 'flex',
-    alignItems: 'center'
-    // lineHeight: '50px'
+    alignItems: 'center',
+    // border: '1px solid red',
+    width: 'inherit'
   },
-  home: {
-    width: 100
-  },
-  links: {
-    margin: 10,
-    color: '#eee',
-    textDecoration: 'none',
-    fontFamily: "Rajdhani, sans-serif",
-  },
-  linksContainer: {
-    float: 'right',
-    border: '1px solid #ccc',
-    // justifyContent: 'left'
+  palace: {
+    width: 50,
+    padding: 20
   },
   brandContainer: {
     // border: '1px solid #ccc',
-    margin: 10
+    padding: 10,
   },
   brand: {
     color: '#eee',
-    textDecoration: "none",
     fontFamily: "Rajdhani, sans-serif",
     fontSize: "1.8em",
     fontWeight: 300,
     textTransform: "uppercase",
-    letterSpacing: '1px'
-  }
+    letterSpacing: '1px',
+    
+  },
+  links: {
+    color: '#ccc',
+    textDecoration: 'none',
+    fontFamily: "Rajdhani, sans-serif",
+    
+    height: '100%',
+    padding: 20,
+    // border: '1px solid tomato',
+    float: 'right'
+  },
+  linksContainer: {
+    // border: '1px solid blue',
+    width: '100%'
+  },
+  
 }
-
-console.log(typeof global.innerWidth)
-
 
 export default () => {
   const [width, setWidth] = useState(global.innerWidth)
-  const [navPad, setNavPad] = useState(0)
-  const [brand, setBrand] = useState('cartesian')
+  const [navPad, setNavPad] = useState(100)
+  const [brand, setBrand] = useState(true)
   
 
   useEffect(()=> {
@@ -56,29 +59,37 @@ export default () => {
     const handleShowBrand = (brand) => setBrand(brand)
     if (width > 650){
       handleNavPad(100)
-      handleShowBrand('cartesian')
+      handleShowBrand(true)
 
     } else {
       handleNavPad(10)
-      handleShowBrand('')
+      handleShowBrand(false)
     }
 
     return () => global.removeEventListener('resize', handleWidthResize)
   }, [width, navPad, brand])
 
+  const showBrand = (brand) => {
+    if(brand){
+      return (<h1 style={styles.brand}>Cartesian</h1>)
+    } else {
+      return null
+    }
+  }
+
   return (
-    <header >
-        <nav style={Object.assign({}, styles.container, { paddingLeft: navPad})}>
-          <div style={styles.brandContainer}>
-            <Link href='/'><a style={styles.home}><Palace height={20} width={20}/></a></Link>
+    <header>
+        <nav style={Object.assign({}, styles.container, { paddingLeft: navPad, paddingRight: navPad})}>
+          <div >
+            <Link href='/'><a style={styles.palace}><Palace height={20} width={20}/></a></Link>
           </div>
           <div style={styles.brandContainer}>
-            <Link href='/'><a style={styles.brand}>{brand}</a></Link>
+            <Link href='/'><a style={{textDecoration: 'none'}}>{showBrand(brand)}</a></Link>
           </div>
           <div style={styles.linksContainer}>
-            <Link href='/Apps'><a style={styles.links}>Apps</a></Link>
-            <Link href='/Blog'><a style={styles.links}>Blog</a></Link>
             <Link href='/Company'><a style={styles.links}>Company</a></Link>
+            <Link href='/Blog'><a style={styles.links}>Blog</a></Link>
+            <Link href='/Apps'><a style={styles.links}>Apps</a></Link>
           </div>
         </nav>
       </header>
