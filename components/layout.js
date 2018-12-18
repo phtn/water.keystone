@@ -1,21 +1,21 @@
-import Link from 'next/link'
 import Head from 'next/head'
+import Navbar from './Navbar'
 
-export default ({ children, title = 'This is the default title' }) => (
+
+export default ({ children, title = 'Cartesian' }) => (
   <div>
     <Head>
       <title>{ title }</title>
       <meta charSet='utf-8' />
-      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      <meta name='viewport' content='initial-scale=1.0, width=device-width, user-scalable=no' />
+      <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Abel|Roboto:100,300|Open+Sans:300|IBM+Plex+Sans:700i|Hind:400|Rajdhani" rel="stylesheet"></link>
     </Head>
-    <header>
-      <nav>
-        <Link href='/'><a>Home</a></Link> |
-        <Link href='/Apps'><a>Apps</a></Link> |
-        <Link href='/Blog'><a>Blog</a></Link> |
-        <Link href='/Company'><a>Company</a></Link>
-      </nav>
-    </header>
+    <style jsx global>{`
+      body { 
+        margin: 0;
+      }
+    `}</style>
+    <Navbar/>
 
     { children }
 
