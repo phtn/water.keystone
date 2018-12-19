@@ -1,6 +1,12 @@
-import Layout from '../components/layout'
-export default () => (
-  <Layout title='Apps'>
-    <h2>Apps</h2>
+import Layout from "../components/Layout";
+import Trailer from "../components/Trailer"
+import Card from "../components/Card";
+
+const apps = [{ title: "Palette Picker" }, { title: "Wikilite" }];
+
+const Apps = () => (
+  <Layout title="Apps">
+    <Trailer items={apps}/>
   </Layout>
-  )
+)
+export default Apps

@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Particles from 'react-particles-js'
 const styles = {
   container: {

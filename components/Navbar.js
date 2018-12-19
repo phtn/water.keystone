@@ -52,7 +52,7 @@ export default props => {
     <header>
         <nav style={Object.assign({}, styles.container, { paddingLeft: navPad, paddingRight: navPad})}>
           <div >
-            <Link href='/'><a style={styles.palace}><Palace height={20} width={20}/></a></Link>
+            <Link href='/'><a style={styles.palace}><Palace height={25} width={25}/></a></Link>
           </div>
           <div style={styles.brandContainer}>
             <Link href='/'><a style={styles.brand}>{brand}</a></Link>

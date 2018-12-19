@@ -1,6 +1,13 @@
-import Layout from '../components/layout'
-export default () => (
-  <Layout title='Company'>
-    <h2>Company</h2>
-  </Layout>
+import Layout from "../components/Layout";
+import Trailer from "../components/Trailer"
+
+const items = [{ title: "Our Company" }, { title: "CEO | ThereforeIAm" }];
+
+const Company = () => {
+  return (
+    <Layout title="Company">
+      <Trailer items={items}/>
+    </Layout>
   )
+}
+export default Company

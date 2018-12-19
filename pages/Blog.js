@@ -1,6 +1,13 @@
-import Layout from '../components/layout'
-export default () => (
-  <Layout title='Blog'>
-    <h2>Blog</h2>
-  </Layout>
+import Layout from "../components/Layout";
+import Trailer from "../components/Trailer"
+
+const blogs = [{ title: "Tensorflow" }, { title: "PyTorch" }];
+
+const Blog = () => {
+  return (
+    <Layout title="Blog">
+      <Trailer items={blogs}/>
+    </Layout>
   )
+}
+export default Blog
