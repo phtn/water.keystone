@@ -88,8 +88,8 @@ export default props => {
           retina_detect: true
         }}
       />
-      <h1 style={Object.assign({}, styles.hero, {top: nav === 100 ? 160 : 110})}>we build</h1>
-      <h3 style={Object.assign({}, styles.sub, {top: nav === 100 ? 210 : 160})}>business applications</h3>
+      <h1 style={Object.assign({}, styles.hero, {top: nav === 100 ? 160 : 110})}>Watr</h1>
+      <h3 style={Object.assign({}, styles.sub, {top: nav === 100 ? 210 : 160})}>Filtration Systems</h3>
     </div>
   )
 }

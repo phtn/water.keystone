@@ -1,6 +1,6 @@
 import { useState, useEffect, Children, cloneElement } from 'react'
 import Head from 'next/head'
-import Navbar from './Navbar'
+import Navbar from './navbar'
 
 export default ({ children, title = 'Cartesian' }) => {
 

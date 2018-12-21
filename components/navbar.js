@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Palace from "../assets/palace.svg";
+import Sea from "../assets/sea.svg";
 
 const styles = {
   container: {
@@ -10,7 +10,7 @@ const styles = {
     alignItems: "center",
     width: "inherit"
   },
-  palace: {
+  sea: {
     width: 50,
     padding: 20
   },
@@ -44,7 +44,7 @@ const Navbar = props => {
   const links = [
     { id: 0, title: "company" },
     { id: 1, title: "blog" },
-    { id: 2, title: "apps" }
+    { id: 2, title: "products" }
   ];
   const { navPad, brand } = props;
 
@@ -58,8 +58,8 @@ const Navbar = props => {
       >
         <div>
           <Link href="/">
-            <a style={styles.palace}>
-              <Palace height={25} width={25} />
+            <a style={styles.sea}>
+              <Sea height={25} width={25} />
             </a>
           </Link>
         </div>

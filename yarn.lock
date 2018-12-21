@@ -1099,6 +1099,13 @@ babel-loader@8.0.2:
     mkdirp "^0.5.1"
     util.promisify "^1.0.0"
 
+babel-plugin-import-static-files@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-import-static-files/-/babel-plugin-import-static-files-1.0.4.tgz#2b9c36d55be1f25f8db39b9c625df005563049e0"
+  integrity sha512-TRkwmDpZCdISOulOomqqlOf4c06NrPBcIEiZLtBzK5y1oSz+cEOXw/C+0nGjnDFDWlMLTI3ZntvlBUYXqIR07Q==
+  dependencies:
+    fs-extra "^4.0.2"
+
 babel-plugin-inline-react-svg@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-inline-react-svg/-/babel-plugin-inline-react-svg-1.0.1.tgz#1457edae1035a12b3c5026ef28a1239edc71d2a2"
@@ -2131,6 +2138,15 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
+fs-extra@^4.0.2:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
+  integrity sha512-q6rbdDd1o2mAnQreO7YADIxf/Whx4AHBiRf6d+/cVT8h44ss+lHgxf1FemcqDnQt9X3ct4McHr+JMGlYSsK7Cg==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -2245,7 +2261,7 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4:
+graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4, graceful-fs@^4.1.6:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
@@ -2695,6 +2711,13 @@ json5@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   integrity sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=
+
+jsonfile@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
+  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  optionalDependencies:
+    graceful-fs "^4.1.6"
 
 jsonify@~0.0.0:
   version "0.0.0"
@@ -4546,6 +4569,11 @@ unique-slug@^2.0.0:
   integrity sha512-n9cU6+gITaVu7VGj1Z8feKMmfAjEAQGhwD9fE3zvpRRa0wEIx8ODYkVGfSc94M2OX00tUFV8wH3zYbm1I8mxFg==
   dependencies:
     imurmurhash "^0.1.4"
+
+universalify@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
+  integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 
 unset-value@^1.0.0:
   version "1.0.0"

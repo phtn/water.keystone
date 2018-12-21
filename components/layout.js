@@ -1,8 +1,8 @@
 import { useState, useEffect, Children, cloneElement } from 'react'
 import Head from 'next/head'
-import Navbar from './Navbar'
+import Navbar from './navbar'
 
-export default ({ children, title = 'Cartesian' }) => {
+export default ({ children, title = 'Watr' }) => {
 
   const getInitialPad = () => {
     if (global.innerWidth > 650){
@@ -13,7 +13,7 @@ export default ({ children, title = 'Cartesian' }) => {
   }
   const getInitialBrand = () => {
     if (global.innerWidth > 650){
-      return 'cartesian'
+      return 'Watr'
     } else {
       return ''
     }
@@ -32,7 +32,7 @@ export default ({ children, title = 'Cartesian' }) => {
 
     if (width > 650){
       handleNavPad(100)
-      handleShowBrand('Cartesian')
+      handleShowBrand('Watr')
     } else {
       handleNavPad(10)
       handleShowBrand('')
