@@ -42,9 +42,9 @@ const styles = {
 
 const Navbar = props => {
   const links = [
-    { id: 0, title: "Company" },
-    { id: 1, title: "Blog" },
-    { id: 2, title: "Apps" }
+    { id: 0, title: "company" },
+    { id: 1, title: "blog" },
+    { id: 2, title: "apps" }
   ];
   const { navPad, brand } = props;
 
